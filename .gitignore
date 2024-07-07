@@ -1,0 +1,7 @@
+docs\*
+\llama_index
+\chroma
+\__pycache__
+\storage
+.env
+.vscode
