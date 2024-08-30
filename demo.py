@@ -3,11 +3,11 @@ import streamlit as st
 from dotenv import load_dotenv
 from langchain.document_loaders import PyPDFLoader
 from langchain.chains import ConversationalRetrievalChain
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import GPT4AllEmbeddings
-from langchain.vectorstores.chroma import Chroma
+from langchain_chroma import Chroma
 from langchain.prompts import PromptTemplate
 from langchain.retrievers import ParentDocumentRetriever
 from langchain.storage import InMemoryStore
@@ -19,7 +19,7 @@ from langchain.agents import AgentType, Tool, initialize_agent
 from langchain.document_loaders import WebBaseLoader
 
 load_dotenv()
-openai_api_key = "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"
+openai_api_key = ""
 openai.api_key = openai_api_key
 os.environ["OPENAI_API_KEY"] = openai_api_key
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
